@@ -11,16 +11,16 @@ function makeCalculator() {
 
       return calculator;
     },
-    add: (number = 0) => {
+    add(number = 0) {
       calculator.result += number;
     },
-    subtract: (number = 0) => {
+    subtract(number = 0) {
       calculator.result -= number;
     },
-    multiply: (number = 1) => {
+    multiply(number = 1) {
       calculator.result *= number;
     },
-    divide: (number = 1) => {
+    divide(number = 1) {
       calculator.result /= number;
     },
     operate(method, number) {
