@@ -7,26 +7,26 @@ function makeCalculator() {
   const calculator = {
     result: 0,
     reset() {
-      calculator.result = 0;
+      this.result = 0;
 
-      return calculator;
+      return this;
     },
     add(number = 0) {
-      calculator.result += number;
+      this.result += number;
     },
     subtract(number = 0) {
-      calculator.result -= number;
+      this.result -= number;
     },
     multiply(number = 1) {
-      calculator.result *= number;
+      this.result *= number;
     },
     divide(number = 1) {
-      calculator.result /= number;
+      this.result /= number;
     },
     operate(method, number) {
-      method(number);
+      method.call(this, number);
 
-      return calculator;
+      return this;
     },
   };
 
